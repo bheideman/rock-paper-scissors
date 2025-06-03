@@ -1,5 +1,3 @@
-
-
 function capitalize(text) {
             first = text[0].toUpperCase()
             rest = text.slice(1, text.length).toLowerCase()
@@ -19,9 +17,9 @@ function getComputerChoice(){
     return computerChoice
 }
 
-function getUserChoice() {
-    let userChoice = prompt("Type rock, paper, or scissors: ")
-    return userChoice
+function getHumanChoice() {
+    let humanChoice = prompt("Type rock, paper, or scissors: ")
+    return humanChoice
 }
 
 function playGame(){
@@ -31,7 +29,7 @@ function playGame(){
 
     function playRound(humanChoice, computerChoice) {
         computerChoice = getComputerChoice().toLowerCase()
-        humanChoice = getUserChoice().toLowerCase()
+        humanChoice = getHumanChoice().toLowerCase()
     
         if (((humanChoice === "rock" && computerChoice === "paper") || humanChoice === "paper" && computerChoice === "scissors") || humanChoice === "scissors" && computerChoice === "rock") {
             console.log("You lose! " + capitalize(computerChoice) + " beats " + capitalize(humanChoice) + ".")
